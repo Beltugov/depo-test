@@ -1,0 +1,8 @@
+<div class="main">
+  <div class="main-content">
+    <h2 class="main-content__title">Список книг</h2>
+    <div class="main-content__list">
+      <app-list [books]="(books$ | async)!" [collectionsId]="(collection$ | async)!"/>
+    </div>
+  </div>
+</div>

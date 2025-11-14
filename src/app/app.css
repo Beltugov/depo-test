@@ -1,0 +1,14 @@
+.header {
+  background-color: var(--black-color);
+  color: var(--grey-color);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}

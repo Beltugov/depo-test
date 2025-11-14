@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-info">
+    <h3>{{ book.title }}</h3>
+    <div>Автор: {{ book.author }}</div>
+    <div *ngIf="book.year !== '0'">Год: {{ book.year }}</div>
+    <div *ngIf="book.pages !== '0'">Страниц: {{ book.pages }}</div>
+    <button
+      (click)="handlerClick.emit({event: $event, bookId: book.id})"
+    >{{ isInCollection ? 'Удалить из коллекции' : 'Добавить в коллекцию' }}
+    </button>
+  </div>
+  <div class="card-action">
+    <div *ngIf="isInCollection">
+      Статус: {{ book.status }}
+    </div>
+    <button *ngIf="isInCollection && book.status !== BookStatus.DONE"
+            (click)="changeStatus.emit({
+            status: book.status === BookStatus.UNREAD ? BookStatus.IN_PROGRESS : BookStatus.DONE,
+            bookId: book.id})"
+    >{{ book.status === BookStatus.UNREAD ? 'Начать' : 'Закончить' }}
+    </button>
+  </div>
+</div>

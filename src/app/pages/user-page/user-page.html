@@ -1,0 +1,14 @@
+<div class="user">
+  <div class="user-content">
+    <h2 class="user-content__title">Мой список книг</h2>
+    <div class="user-content__action">
+      <button (click)="filter()">Все</button>
+      <button (click)="filter(BookStatus.UNREAD)">{{BookStatus.UNREAD}}</button>
+      <button (click)="filter(BookStatus.IN_PROGRESS)">{{BookStatus.IN_PROGRESS}}</button>
+      <button (click)="filter(BookStatus.DONE)">{{BookStatus.DONE}}</button>
+    </div>
+    <div class="user-content__list">
+      <app-list [books]="(books$ | async)!" [collectionsId]="(collection$ | async)!"/>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+:root {
+  --black-color: black;
+  --grey-color: #e8e8e8;
+  --white-color: white;
+}
+
+button {
+  background: none;
+  padding: 8px;
+  border: 1px solid var(--black-color);
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--grey-color);
+  cursor: pointer;
+}

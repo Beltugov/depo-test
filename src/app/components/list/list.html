@@ -1,0 +1,9 @@
+<div class="list">
+  <app-card *ngFor="let book of books"
+            [book]="book"
+            [isInCollection] = isInCollection(book.id)
+            (handlerClick)="isInCollection(book.id) ? onRemove($event) : onAdd($event) "
+            (changeStatus)="changeStatus($event)"
+  />
+  <div *ngIf="books.length === 0">Список пуст</div>
+</div>

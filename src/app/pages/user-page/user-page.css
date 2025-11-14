@@ -1,0 +1,10 @@
+.user-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-content__action {
+  display: flex;
+  gap: 12px;
+}
